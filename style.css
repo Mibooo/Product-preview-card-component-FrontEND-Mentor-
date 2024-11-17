@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  min-width: 100vw;
+  height: 100vh;
+  gap: 20px;
+}
+
+main {
+  display: flex;
+  max-width: 600px;
+  min-height: auto;
+  overflow: hidden;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.info-product {
+  background-color: white;
+  gap: 20px;
+  padding: 26px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 12px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button::before {
+  content: url(/images/icon-cart.svg);
+}
+
+button:hover {
+  background-color: hsl(158, 36%, 24%);
+}
+
+#discount {
+  font-size: 1rem;
+  color: rgba(140, 140, 140, 0.776);
+  text-decoration: line-through;
+}
+
+#product-categorie {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(70, 69, 69, 0.697);
+}
+
+.description {
+  font-size: calc(0.3rem + 1vh);
+  color: rgba(70, 69, 69, 0.697);
+}
+
+#real-price {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: "Fraunces", sans-serif;
+  color: rgba(0, 0, 0, 0.809);
+}
+
+@media screen and (max-width: 659px) {
+  body {
+    padding: 48px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 24px;
+    justify-content: center;
+  }
+
+  #real-price {
+    font-size: 1.8rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 50%;
+  }
+
+  .info-product {
+    width: 100%;
+    height: 50%;
+    gap: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
